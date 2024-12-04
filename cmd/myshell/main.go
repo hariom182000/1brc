@@ -9,7 +9,8 @@ import (
 func main() {
 	fmt.Fprint(os.Stdout, "$ ")
 	s, e := bufio.NewReader(os.Stdin).ReadString('\n')
-	if s == "invalid_command" && e == nil {
+	if e == nil {
 		fmt.Fprintf(os.Stdout, "$ %s: not found", s)
 	}
+
 }
