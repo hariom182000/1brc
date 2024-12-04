@@ -6,8 +6,10 @@ import (
 	"os"
 )
 
-
 func main() {
 	fmt.Fprint(os.Stdout, "$ ")
-	bufio.NewReader(os.Stdin).ReadString('\n')
+	s, e := bufio.NewReader(os.Stdin).ReadString('\n')
+	if s == "invalid_command" && e == nil {
+		fmt.Fprintf(os.Stdout, "$ %s: not found", s)
+	}
 }
