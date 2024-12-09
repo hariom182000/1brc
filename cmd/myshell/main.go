@@ -8,8 +8,8 @@ import (
 )
 
 func main() {
-	fmt.Fprint(os.Stdout, "$ ")
 	for {
+		fmt.Fprint(os.Stdout, "$ ")
 		s, _ := bufio.NewReader(os.Stdin).ReadString('\n')
 		fmt.Fprintf(os.Stdout, "%s: not found\n", strings.Split(s, "\n")[0])
 	}
