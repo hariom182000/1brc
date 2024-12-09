@@ -9,9 +9,9 @@ import (
 
 func main() {
 	fmt.Fprint(os.Stdout, "$ ")
-	s, e := bufio.NewReader(os.Stdin).ReadString('\n')
-	if e == nil {
+	for {
+		s, _ := bufio.NewReader(os.Stdin).ReadString('\n')
 		fmt.Fprintf(os.Stdout, "%s: not found\n", strings.Split(s, "\n")[0])
 	}
-
+	
 }
