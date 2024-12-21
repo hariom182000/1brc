@@ -13,7 +13,7 @@ func main() {
 	pathFlag := flag.String("PATH", "", "path dirctroy")
 	flag.Parse()
 	paths := strings.Split(*pathFlag, ":")
-
+	fmt.Printf( "%s path is",*pathFlag)
 	for {
 		fmt.Print("$ ")
 
