@@ -20,7 +20,7 @@ func main() {
 		s, _ := bufio.NewReader(os.Stdin).ReadString('\n')
 		s = strings.TrimSpace(s)
 
-		if s == "exit" {
+		if s == "exit 0" {
 			os.Exit(0)
 		}
 
