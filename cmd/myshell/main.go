@@ -9,11 +9,7 @@ import (
 )
 
 func main() {
-
-	pathFlag := flag.String("PATH", "", "path dirctroy")
-	flag.Parse()
-	paths := strings.Split(*pathFlag, ":")
-	fmt.Printf( "%s path is \n",*pathFlag)
+	paths := strings.Split(os.Getenv("PATH"), ":")
 	for {
 		fmt.Print("$ ")
 
