@@ -17,7 +17,7 @@ func main() {
 		}else if  strings.Contains(s,"echo "){
 				fmt.Println(strings.Split(s,"echo ")[1]);
 		}else{
-			fmt.Fprintf(os.Stdout, "%s: not found\n", s)
+			fmt.Fprintf(os.Stdout, "%s: command not found\n", s)
 		}
 		 
 	}
