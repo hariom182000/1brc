@@ -36,7 +36,6 @@ func main() {
 					break
 				}
 			}
-			fmt.Println(fullPath)
 			if fileFound {
 				fmt.Printf("%s is %s\n", fileName, fullPath)
 			} else {
