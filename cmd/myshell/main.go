@@ -27,7 +27,7 @@ func main() {
 			if exists {
 				fmt.Printf("%s is a shell builtin\n", strings.Split(s, "type ")[1])
 			} else {
-				fmt.Println("invalid_command: not found")
+				fmt.Printf("%s: not found\n",strings.Split(s, "type ")[1]);
 			}
 		} else {
 			fmt.Fprintf(os.Stdout, "%s: command not found\n", s)
