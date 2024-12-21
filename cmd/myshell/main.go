@@ -11,6 +11,7 @@ func main() {
 	supportedCommands := map[string]bool{
 		"echo": true,
 		"exit": true,
+		"type": true,
 	}
 	for {
 		fmt.Print("$ ")
