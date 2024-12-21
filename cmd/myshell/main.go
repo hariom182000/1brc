@@ -9,6 +9,11 @@ import (
 
 func main() {
 	paths := strings.Split(os.Getenv("PATH"), ":")
+	supportedCommands := map[string]bool{
+		"echo": true,
+		"type": true,
+		"exit": true,
+	}
 	for {
 		fmt.Print("$ ")
 
@@ -25,6 +30,11 @@ func main() {
 		} else if strings.HasPrefix(s, "type ") {
 
 			fileName := strings.TrimPrefix(s, "type ")
+
+			if _, exists := supportedCommands[fileName]; exists {
+				fmt.Printf("%s is a shell builtin\n", fileName)
+				continue
+			}
 
 			fileFound := false
 			fullPath := ""
