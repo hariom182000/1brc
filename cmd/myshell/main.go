@@ -29,8 +29,7 @@ func main() {
 			fileFound := false
 			fullPath := ""
 			for _, path := range paths {
-
-				fullPath := path + "/" + fileName
+				fullPath = path + "/" + fileName
 				if _, err := os.Stat(fullPath); err == nil {
 					fileFound = true
 					break
